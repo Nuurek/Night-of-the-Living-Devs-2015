@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Rko.PersonTypeChoose.PersonTypePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Rko.PersonTypeChoose"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Rko.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="InfoPanel">
+            <TextBlock x:Name="something" Text="Wybierz wiek poszkodowanego" TextWrapping="WrapWholeWords" HorizontalAlignment="Stretch" TextAlignment="Center" FontSize="33" Foreground="#DD9216AE" Margin="0,20,0,0"></TextBlock>
+
+        </StackPanel>
+          
+            <ListView VerticalAlignment="Center" HorizontalAlignment="Center">
+                
+                <controls:PersonTypeElement x:Name="Adult" PointerPressed="Adult_PointerPressed"></controls:PersonTypeElement>
+
+                <controls:PersonTypeElement x:Name="Child" PersonType="Child" PointerPressed="Child_PointerPressed" Foreground="Black" Margin="0,10,0,0"/>
+
+                <controls:PersonTypeElement x:Name="Infant" PointerPressed="Infant_PointerPressed" PersonType="Infant" Margin="0,20,0,0"></controls:PersonTypeElement>
+            </ListView>
+
+
+        <controls:PageController x:Name="KontrolkaSeby" Grid.Row="1"></controls:PageController>
+    </Grid>
+</Page>

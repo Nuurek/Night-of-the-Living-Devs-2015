@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Rko.SafetyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Rko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Rko.Controls"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="InfoPanel" Margin="0,20,0,0">
+            <TextBlock Text="Bezpieczeństwo" FontSize="33" Foreground="#FF9216AE" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Text="Po pierwsze - upewnij się, czy poszkodowany i wszyscy świadkowie zdarzenia są bezpieczni." TextAlignment="Left" TextWrapping="WrapWholeWords" Margin="25,0,0,0"></TextBlock>
+        </StackPanel>
+
+
+
+        <controls:PageController x:Name="Navigator" Grid.Row="1"/>
+    </Grid>
+</Page>

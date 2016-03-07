@@ -1,0 +1,28 @@
+﻿<UserControl
+    x:Class="Rko.Controls.PageController"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Rko.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="60"
+    d:DesignWidth="360" Unloaded="UserControl_Unloaded">
+
+    
+    
+    <Grid Background="#FF9216AE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <MediaElement Name="audioPlayer" AudioCategory="Speech"/>
+
+        <AppBarButton x:Name="BackButton" HorizontalAlignment="Center" Icon="Back" Label="Powrót" Margin="0" VerticalAlignment="Top" Click="BackButton_Click" Foreground="White" Visibility="Collapsed"/>
+        <AppBarButton x:Name="PauseButton" HorizontalAlignment="Center" Icon="Pause" Label="Pauza" Margin="0" VerticalAlignment="Top" Grid.Column="1" Click="PauseButton_Click" Foreground="White"/>
+        <AppBarButton x:Name="SkipButton" HorizontalAlignment="Center" Icon="Forward" Label="Dalej" Margin="0" VerticalAlignment="Top" Grid.Column="2" Click="SkipButton_Click" Foreground="White" Visibility="Collapsed"/>
+
+    </Grid>
+</UserControl>

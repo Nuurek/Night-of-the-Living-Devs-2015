@@ -1,0 +1,29 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Rko.RKONiemowlak"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Rko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="using:Rko.Controls"
+    mc:Ignorable="d"                     >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <StackPanel x:ConnectionId='3' x:Name="InfoPanel" Margin="10,30,10,0">
+                <TextBlock TextWrapping="Wrap" Text="Niemowle" FontSize="33" Margin="10,0,0,20" Foreground="#FF9216AE" TextAlignment="Center"/>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Justify" Text="Ułóż głowę w pozycji udrożnionych dróg oddechowych (pozycja pośrednia). Ułóż swoje usta tak, aby objąć jednocześnie usta i nos dziecka. Wykonaj delikatny oddech, aby unieść klatkę piersiową dziecka."/>
+                <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/niemowlakOddechy.png" Margin="0,10"/>
+                <TextBlock HorizontalAlignment="Left" TextAlignment="Justify" TextWrapping="Wrap" Text="Ułóż 2 palce na klatce piersiowej w dolnej połowie mostka (na wysokości linii łączącej brodawki sutkowe) – połóż drugą dłoń na głowie dziecka w celu jej stabilizacji." VerticalAlignment="Top"/>
+                <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/niemowlakUciski.png" Margin="0,10"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Controls:PageController x:ConnectionId='2' x:Name="Navigator" Margin="0" VerticalAlignment="Top" Grid.Row="1"/>
+    </Grid>
+</Page>
+

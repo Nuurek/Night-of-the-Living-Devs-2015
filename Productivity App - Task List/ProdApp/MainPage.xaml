@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="ProdApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProdApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="641"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="menuStack.Orientation" Value="Vertical"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer>
+            <Grid x:Name="WholeGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        
+
+        <local:NoteEditor x:Name="Editor" Margin="0" Grid.Column="1" Grid.RowSpan="2" Visibility="Collapsed"/>
+
+
+
+        <StackPanel x:Name="menuStack" Orientation="Horizontal">
+            <AppBarButton x:Name="AddNoteButton" HorizontalAlignment="Left" Icon="Add" Label="Add note" Margin="0" VerticalAlignment="Top" Click="AddNoteButton_Click"/>
+            <AppBarButton x:Name="AddTodoButton" HorizontalAlignment="Left" Icon="Add" Label="Add todo" Margin="10,0,0,0" VerticalAlignment="Top" Click="AddTodoButton_Click"/>
+            <AppBarButton x:Name="DeleteButton" HorizontalAlignment="Left" Icon="Delete" Label="Delete" Margin="10,0,0,0" VerticalAlignment="Top" Click="DeleteButton_Click"/>
+            <AppBarButton x:Name="DoneButton" HorizontalAlignment="Left" Icon="Accept" Label="Check" Margin="10,0,0,0" VerticalAlignment="Top" Click="DoneButton_OnClick"/>
+            <AppBarButton x:Name="ScoreButton" HorizontalAlignment="Left" Icon="SolidStar" Label="Scores" Margin="10,0,0,0" VerticalAlignment="Top" Click="ScoreButton_Click"/>
+                </StackPanel>
+
+                <ListView x:Name="ElementList" Margin="0" Grid.Row="1" SelectionChanged="ElementList_SelectionChanged" Background="LightGray">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

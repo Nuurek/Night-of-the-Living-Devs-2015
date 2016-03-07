@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Rko.Koniec.Zakonczenie"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Rko.Koniec"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Rko.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="auto"/>
+			</Grid.RowDefinitions>
+			<controls:PageController x:Name="KontrolaNadSwiatem" Grid.Row="1"/>
+			<StackPanel Grid.Row="0" x:Name="InfoPanel" Margin="10, 30, 10, 0">
+				<TextBlock x:Name="textBlock" TextWrapping="Wrap" Margin="10, 0, 0, 20" Text="Gratulacje!" FontSize="33" Foreground="#ff9216ae"/>
+				<TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Ukończyłeś kurs pierwszej pomocy." FontSize="33" Foreground="#ff9216ae"/>
+				<Button HorizontalAlignment="Stretch" Margin="10,20,10,10" Background="#ff9216ae" Foreground="White" FontSize="33" Click="Button_Click">Zakończ kurs</Button>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</Page>
